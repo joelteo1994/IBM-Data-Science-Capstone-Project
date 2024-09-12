@@ -72,7 +72,7 @@ def get_pie_chart(entered_site):
 def get_scatter_chart(entered_site, payload_range):
     low, high = payload_range 
     filtered_df = spacex_df[(spacex_df['Payload Mass (kg)'] >= low) & (spacex_df['Payload Mass (kg)'] <= high)]
-    if entered_site == 'All': 
+    if entered_site == 'ALL': 
         fig = px.scatter(filtered_df, x='Payload Mass (kg)', y='class', color='Booster Version Category', title='Correlation between Payload and Success for all sites')
         return fig
     else:
